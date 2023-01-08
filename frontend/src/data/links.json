@@ -1,0 +1,6 @@
+[
+  { "id": 1, "url": "/", "text": "Start" },
+  { "id": 2, "url": "/battle", "text": "Battle" },
+  { "id": 3, "url": "/gallery", "text": "Gallery" },
+  { "id": 4, "url": "/newHamster", "text": "Create" }
+]

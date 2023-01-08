@@ -1,0 +1,48 @@
+:root {
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --clr-primary-1: hsl(0, 0%, 5%);
+  --clr-primary-2: hsl(0, 0%, 15%);
+  --clr-primary-3: hsl(0, 0%, 25%);
+  --clr-primary-4: hsl(0, 0%, 35%);
+  --clr-primary-5: hsl(0, 0%, 50%);
+  --clr-primary-6: hsl(0, 0%, 60%);
+  --clr-primary-7: hsl(0, 0%, 70%);
+  --clr-primary-8: hsl(0, 0%, 80%);
+  --clr-primary-9: hsl(0, 0%, 90%);
+  --clr-primary-10: hsl(0, 0%, 95%);
+  --clr-primary-11: hsl(0, 0%, 100%);
+  --clr-hover-1: hsl(338, 100%, 48%);
+  --clr-hover-2: salmon;
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Lacquer', sans-serif;
+}
+
+html {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--clr-primary-10);
+}
+
+/* .app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} */

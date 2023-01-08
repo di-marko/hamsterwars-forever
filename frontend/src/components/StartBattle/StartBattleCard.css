@@ -1,0 +1,124 @@
+.containerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 100%;
+}
+
+.start-wrapper {
+  width: 350px;
+  display: inline-block;
+  margin: 15rem auto;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.start-wrapper-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.start-wrapper-content h1 {
+  font-family: var(--font-secondary);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.start-wrapper-content p {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.start-wrapper-content span {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.start-wrapper-content #fate {
+  font-size: 1.2rem;
+  font-family: var(--font-secondary);
+  text-decoration: none;
+  padding: 0 3px;
+  color: var(--clr-hover-1);
+  background-color: var(--clr-primary-10);
+}
+
+.start-wrapper-content h1,
+.start-wrapper-content p,
+.start-wrapper-content .button {
+  margin: 1rem;
+}
+
+.start-wrapper .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.075rem;
+  border: 1px solid var(--clr-primary-11);
+  border-radius: 5px;
+  margin-top: 2rem;
+  cursor: pointer;
+  color: var(--clr-primary-11);
+  transition: all 0.2s ease-in;
+}
+
+.start-wrapper .button:hover {
+  background-color: var(--clr-primary-1);
+  border: none;
+}
+
+.start-wrapper .button a {
+  color: var(--clr-primary-11);
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .start-wrapper {
+    width: 60%;
+  }
+  .start-wrapper-content h1 {
+    font-size: 1.8rem;
+  }
+  .start-wrapper-content p {
+    font-size: 0.9rem;
+  }
+  .start-wrapper-content .button {
+    height: 40px;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .start-wrapper {
+    width: 60%;
+  }
+  .start-wrapper-content h1 {
+    font-size: 2rem;
+  }
+  .start-wrapper-content p {
+    font-size: 1rem;
+  }
+  .start-wrapper-content .button {
+    height: 45px;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .start-wrapper {
+    width: 350px;
+  }
+}

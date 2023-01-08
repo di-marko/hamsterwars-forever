@@ -1,0 +1,25 @@
+.containerStartPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  background: url('../images/hamster-bg3.png') center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.start-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
+  max-width: 1200px;
+}
+
+/* @media only screen and (min-width: 1200px) {
+  .start-page {
+    margin-bottom: 10rem;
+  }
+} */

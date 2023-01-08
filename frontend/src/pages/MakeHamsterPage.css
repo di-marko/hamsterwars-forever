@@ -1,0 +1,81 @@
+.containerMakeHamster {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('../images/hamster-bg-world2.png') center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hamster-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+}
+
+form label {
+  display: block;
+  color: var(--clr-primary-10);
+}
+
+label input {
+  margin-bottom: 3px;
+}
+
+input[type='text'],
+input[type='number'] {
+  width: 100%;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  border: 1px solid var(--clr-primary-9);
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--clr-primary-10);
+}
+
+button[type='submit'] {
+  width: 100%;
+  height: 50px;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: var(--clr-primary-10);
+  background-color: transparent;
+  border: 1px solid var(--clr-primary-10);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button[type='submit']:hover {
+  background-color: var(--clr-hover-1);
+  border: 1px solid transparent;
+}
+
+button[type='submit']:active {
+  background-color: var(--clr-hover-1);
+}
+
+@media (max-width: 1200px) {
+  .hamster-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamster-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-wrapper {
+    flex-direction: column;
+  }
+}

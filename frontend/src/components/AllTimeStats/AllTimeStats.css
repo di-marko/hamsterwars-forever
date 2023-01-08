@@ -1,0 +1,49 @@
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 12px;
+}
+
+.containerStats {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  color: var(--clr-primary-10);
+  z-index: 999;
+}
+
+.stats-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.winner {
+  width: 120px;
+  padding: 6px 5px 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-hover-1);
+}
+
+.loser {
+  width: 120px;
+  margin-top: 2px;
+  padding: 6px 5px 0 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-hover-1);
+}

@@ -1,0 +1,260 @@
+/* Styling of the ARRR! text */
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  left: -30px;
+  font-size: 1.2rem;
+  font-family: var(--font-secondary);
+  color: var(--clr-hover-1);
+  transform: rotate(25deg);
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: 1;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: 150px;
+}
+
+.nav-icon:hover + .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .tooltip-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip-text-a,
+.tooltip-text-r-1,
+.tooltip-text-r-2,
+.tooltip-text-r-3,
+.tooltip-text-exl {
+  position: relative;
+  transform: rotate(0deg);
+}
+
+.tooltip-text-r-1 {
+  top: 3px;
+  left: 5px;
+  transform: rotate(4deg);
+}
+
+.tooltip-text-r-2 {
+  top: 0;
+  left: 7px;
+  transform: rotate(-25deg);
+}
+
+.tooltip-text-r-3 {
+  top: 4px;
+  left: 12px;
+  transform: rotate(-13deg);
+}
+
+.tooltip-text-exl {
+  top: 0;
+  left: 15px;
+  transform: rotate(-31deg);
+}
+
+/* Navbar styles */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+
+  z-index: 999;
+}
+
+/* Navbar logo styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+/* Navbar icon styles */
+.nav-icon {
+  position: relative;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--clr-primary-10);
+  transition: var(--transition);
+}
+
+.nav-icon:hover {
+  color: var(--clr-primary-1);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translateX(-0px);
+  }
+  20%,
+  80% {
+    transform: translateX(0px);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(-1px);
+  }
+  40%,
+  60% {
+    transform: translateX(1px);
+  }
+}
+
+/* Navbar links styles */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--clr-primary-10);
+  transition: var(--transition);
+  text-decoration: none;
+  letter-spacing: var(--spacing);
+}
+
+.nav-links a:hover {
+  color: var(--clr-hover-1);
+}
+
+/* Navbar elements container styles */
+.nav-bar-elements {
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar styles for screens larger than 768px */
+@media (min-width: 769px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: flex;
+  }
+  .nav-bar-elements {
+    flex-wrap: nowrap;
+  }
+}
+
+.nav-toggle-nav {
+  display: none;
+}
+
+/* Navbar styles for screens smaller than 468px */
+@media (max-width: 468px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nav-toggle-nav {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  .nav-toggle-nav:before,
+  .nav-toggle-nav:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: var(--clr-primary-10);
+    border-radius: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .nav-toggle-nav:before {
+    top: 0.5rem;
+  }
+  .nav-toggle-nav:after {
+    top: 1rem;
+  }
+  .nav-toggle-nav.open:before {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .nav-toggle-nav.open:after {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    padding: 1rem;
+    border: 1px solid var(--clr-hover-1);
+    background-color: var(--clr-primary-1);
+    box-shadow: 0 12px 14px rgba(0, 0, 0, 0.4);
+    transition: height 0.3s ease-out;
+    overflow: hidden;
+  }
+  .nav-links ul li {
+    margin: 0.5rem 0;
+  }
+  .nav-toggle-nav {
+    display: block;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}
+
+/* Open nav styles */
+.nav-links.open {
+  display: block;
+  height: 0;
+  transition: height 0.3s ease-out;
+}
+.nav-links.open ul {
+  height: auto;
+  transition: height 0.3s ease-out;
+}
