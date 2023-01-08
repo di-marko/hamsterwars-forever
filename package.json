@@ -4,17 +4,30 @@
   "description": "Specification for assignment Hamster Wars, including data, with a script for evaluating if a submission follows the spec.",
   "main": "index.js",
   "scripts": {
-    "start": "npx http-server ./evaluate/"
+    "start": "npx http-server ./evaluate/",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iths-sthm-feu20-effektiv/hamsterwars-assignment.git"
   },
-  "keywords": ["express", "REST", "API"],
+  "keywords": [
+    "express",
+    "REST",
+    "API"
+  ],
   "author": "David Andersson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/iths-sthm-feu20-effektiv/hamsterwars-assignment/issues"
   },
-  "homepage": "https://github.com/iths-sthm-feu20-effektiv/hamsterwars-assignment#readme"
+  "homepage": "https://github.com/iths-sthm-feu20-effektiv/hamsterwars-assignment#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }
