@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "npx http-server ./evaluate/",
-    "homepage": "http://di-marko.github.io/hamsterwars-forever/frontend/public/index.html",
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

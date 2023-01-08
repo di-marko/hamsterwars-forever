@@ -93,19 +93,6 @@ client.connect((err) => {
   });
 });
 
-/* app.get('/images', async (req, res) => {
-  try {
-    const [objects] = await storage.bucket(process.env.GOOGLE_CLOUD_STORAGE_BUCKET).getFiles();
-    const imageUrls = objects.map(
-      (object) => `https://storage.googleapis.com/${process.env.GOOGLE_CLOUD_STORAGE_BUCKET}/${object.name}`
-    );
-    res.status(200).send(imageUrls);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send({ error: 'Internal server error' });
-  }
-}); */
-
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
